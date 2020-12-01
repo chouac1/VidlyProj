@@ -167,3 +167,4 @@ C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netco
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Index.cshtml.g.cs
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Details.cshtml.g.cs
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Index.cshtml.g.cs
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Details.cshtml.g.cs

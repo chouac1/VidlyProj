@@ -47,7 +47,7 @@ else
         {
             <div class="card">
                 <div class="container-lg">
-                    <li><a href="/customers/Details/@movies.Id">@movies.Name</a></li>
+                    <li>@Html.ActionLink(movies.Name, "Details", "Movies", new { id = movies.Id }, null)</li>
                 </div>
             </div>
         }
