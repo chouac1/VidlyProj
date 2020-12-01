@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Vidly.Data;
 using Vidly.Models;
 using Vidly.ViewModels;
 
@@ -10,25 +11,26 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
-        public IActionResult Index()
+        public ViewResult Index()
         {
-            var movie = new Movie();
+            var customers = GetCustomers();
 
-            var customers = new List<Customer>
+            return View(customers);            
+        }
+
+        public IActionResult Details(int id)
+        {
+            var customers = GetCustomers().SingleOrDefault(c => c.Id == id);
+            return View(customers);
+        }
+
+        private IEnumerable<Customer> GetCustomers()
+        {
+            return new List<Customer>
             {
-                new Customer {Name = "John Smith"},
-                new Customer {Name = "Mary Williams"}
+                new Customer { Id = 1, Name = "John Smith"},
+                new Customer { Id = 2, Name = "Mary Williams"}
             };
-
-            var viewModel = new RandomMovieViewModel
-            {
-                Movie = movie,
-                Customers = customers
-            };
-
-            return View(viewModel);
-
-            
         }
     }
 }

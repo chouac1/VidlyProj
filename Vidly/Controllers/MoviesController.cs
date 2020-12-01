@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Vidly.Data;
 using Vidly.Models;
 using Vidly.ViewModels;
 
@@ -10,23 +11,43 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+
+        private ApplicationDbContext _context;
+
+        public MoviesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
         public ViewResult Random()
         {
-            var movie = new Movie() { Name = "Shrek!" };
+            //var movie = new Movie() { Name = "Shrek!" };
 
-            var customers = new List<Customer>
-            {
-                new Customer {Name = "Customer 1"},
-                new Customer {Name = "Customer 2"}
-            };
+            //List<Movie> movies = new List<Movie>
+            //{
+            //    new Movie {Name = "Shrek", Id = 1},
+            //    new Movie {Name = "Wall-e", Id = 2}
+            //};
 
-            var viewModel = new RandomMovieViewModel
-            {
-                Movie = movie,
-                Customers = customers
-            };
+            //var customers = new List<Customer>
+            //{
+            //    new Customer {Name = "Customer 1"},
+            //    new Customer {Name = "Customer 2"}
+            //};
 
-            return View(viewModel);
+            //var viewModel = new RandomMovieViewModel
+            //{
+            //    Movies = movies,
+            //    Customers = customers
+            //};
+
+            return View();
+        }
+
+        public IActionResult Index()
+        {
+            var movie = new Movie();
+            return View();
         }
     }
 }

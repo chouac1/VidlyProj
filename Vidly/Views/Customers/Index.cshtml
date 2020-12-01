@@ -1,10 +1,11 @@
-﻿@model Vidly.ViewModels.RandomMovieViewModel
+﻿@model IEnumerable<Vidly.Models.Customer>
 @*
    Comment TESTING
 *@
 
+
 <head>
-    <title>Vidly - Your Number 1 Source for Videos</title>
+    <title>Vidly - Customers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .card {
@@ -29,6 +30,12 @@
 </head>
 
 <h2>List of Customers</h2>
+@if (!Model.Any())
+{
+    <p>We don't have any customers yet.</p>
+}
+else
+{
 <ol>
     <div class="card">
         <div class="container-lg">
@@ -36,14 +43,14 @@
         </div>
     </div>
 
-    @foreach (var customer in Model.Customers)
+    @foreach (var customer in Model)
     {
         <div class="card">
             <div class="container-lg">
-                <li>@customer.Name</li>
-
+                <li><a href="/customers/Details/@customer.Id">@customer.Name</a></li>
             </div>
         </div>
     }
 </ol>
+}
 
