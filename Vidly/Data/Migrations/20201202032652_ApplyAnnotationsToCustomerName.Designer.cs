@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vidly.Data;
 
 namespace Vidly.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201202032652_ApplyAnnotationsToCustomerName")]
+    partial class ApplyAnnotationsToCustomerName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -241,7 +243,7 @@ namespace Vidly.Data.Migrations
 
                     b.HasIndex("MembershipTypeId");
 
-                    b.ToTable("Customers");
+                    b.ToTable("customers");
                 });
 
             modelBuilder.Entity("Vidly.Models.MembershipType", b =>
@@ -275,7 +277,7 @@ namespace Vidly.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movies");
+                    b.ToTable("movies");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

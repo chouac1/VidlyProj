@@ -11,50 +11,28 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public MoviesController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
         public ViewResult Random()
         {
-            //var movie = new Movie() { Name = "Shrek!" };
-
-            //List<Movie> movies = new List<Movie>
-            //{
-            //    new Movie {Name = "Shrek", Id = 1},
-            //    new Movie {Name = "Wall-e", Id = 2}
-            //};
-
-            //var customers = new List<Customer>
-            //{
-            //    new Customer {Name = "Customer 1"},
-            //    new Customer {Name = "Customer 2"}
-            //};
-
-            //var viewModel = new RandomMovieViewModel
-            //{
-            //    Movies = movies,
-            //    Customers = customers
-            //};
-
             return View();
         }
 
         public ViewResult Index()
         {
-            var movie = GetMovies();
+            var movie = _context.Movies.ToList();
             return View(movie);
         }
 
-        public IActionResult Details(int id)
+        public ActionResult Details(int id)
         {
-            var movies = GetMovies().SingleOrDefault(m => m.Id == id);
+            var movies = _context.Movies.Where(m => m.Id == id).SingleOrDefault();
             return View(movies);
         }
 
-        public IEnumerable<Movie> GetMovies()
-        {
-            return new List<Movie>
-            {
-                new Movie{ Id = 1, Name = "Shrek" },
-                new Movie{ Id = 2, Name = "Wall-e" }
-            };
-        }
     }
 }

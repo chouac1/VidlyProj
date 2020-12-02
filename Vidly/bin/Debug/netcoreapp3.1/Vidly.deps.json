@@ -30,6 +30,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
+          "linq2db": "3.1.6",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -299,6 +300,20 @@
         },
         "compile": {
           "Vidly.dll": {}
+        }
+      },
+      "linq2db/3.1.6": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/linq2db.dll": {
+            "assemblyVersion": "3.1.6.0",
+            "fileVersion": "3.1.6.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/linq2db.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.8": {
@@ -3923,6 +3938,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "linq2db/3.1.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tDPq+Vm6EfuqNjRtMPtfiQhIuMye8d1l1ot38MmkTsWpFnC0p4bMxYojcSWZDgrcdvPjxCISESLnAl+Cx1zQ/w==",
+      "path": "linq2db/3.1.6",
+      "hashPath": "linq2db.3.1.6.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.8": {
       "type": "package",

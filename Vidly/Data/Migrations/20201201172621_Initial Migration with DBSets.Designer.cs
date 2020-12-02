@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vidly.Data;
 
 namespace Vidly.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201201172621_Initial Migration with DBSets")]
+    partial class InitialMigrationwithDBSets
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -226,41 +228,12 @@ namespace Vidly.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<byte>("MembershipTypeId")
-                        .HasColumnType("tinyint");
-
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
-
-                    b.Property<bool>("isSubscripedToNewsLietter")
-                        .HasColumnType("bit");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MembershipTypeId");
-
-                    b.ToTable("Customers");
-                });
-
-            modelBuilder.Entity("Vidly.Models.MembershipType", b =>
-                {
-                    b.Property<byte>("Id")
-                        .HasColumnType("tinyint");
-
-                    b.Property<byte>("DiscountRate")
-                        .HasColumnType("tinyint");
-
-                    b.Property<byte>("DurationInMonths")
-                        .HasColumnType("tinyint");
-
-                    b.Property<short>("SignUpFee")
-                        .HasColumnType("smallint");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("MembershipType");
+                    b.ToTable("customers");
                 });
 
             modelBuilder.Entity("Vidly.Models.Movie", b =>
@@ -275,7 +248,7 @@ namespace Vidly.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movies");
+                    b.ToTable("movies");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -325,15 +298,6 @@ namespace Vidly.Data.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Vidly.Models.Customer", b =>
-                {
-                    b.HasOne("Vidly.Models.MembershipType", "MembershipType")
-                        .WithMany()
-                        .HasForeignKey("MembershipTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

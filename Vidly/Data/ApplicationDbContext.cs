@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Vidly.Models;
 
 namespace Vidly.Data
 {
@@ -16,5 +17,9 @@ namespace Vidly.Data
             : base(options)
         {
         }
+
+        public DbSet<Customer> Customers { get; set; }
+
+        public DbSet<Movie> Movies { get; set; }
     }
 }
