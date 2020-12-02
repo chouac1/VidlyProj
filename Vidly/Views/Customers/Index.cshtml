@@ -36,21 +36,25 @@
 }
 else
 {
-<ol>
-    <div class="card">
-        <div class="container-lg">
-            Customers
-        </div>
-    </div>
 
-    @foreach (var customer in Model)
-    {
-        <div class="card">
-            <div class="container-lg">
-                <li>@Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)</li>
-            </div>
-        </div>
-    }
-</ol>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td>Customers</td>
+            <td>Subscription</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)</td>
+                <td>@customer.MembershipType.DiscountRate%</td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
 }
 

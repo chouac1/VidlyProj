@@ -5,7 +5,7 @@
 
 
 <head>
-    <title>Vidly - Customers</title>
+    <title>Vidly - Movies</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .card {
@@ -36,21 +36,22 @@
 }
 else
 {
-    <ol>
-        <div class="card">
-            <div class="container-lg">
-                Movies
-            </div>
-        </div>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>Movies</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
+                </tr>
 
-        @foreach (var movies in Model)
-        {
-            <div class="card">
-                <div class="container-lg">
-                    <li>@Html.ActionLink(movies.Name, "Details", "Movies", new { id = movies.Id }, null)</li>
-                </div>
-            </div>
-        }
-    </ol>
+            }
+
+        </tbody>
+    </table>
 }
 
