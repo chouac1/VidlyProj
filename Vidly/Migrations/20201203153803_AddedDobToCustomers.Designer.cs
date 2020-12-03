@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vidly.Data;
 
-namespace Vidly.Data.Migrations
+namespace Vidly.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201201173410_Add membership type")]
-    partial class Addmembershiptype
+    [Migration("20201203153803_AddedDobToCustomers")]
+    partial class AddedDobToCustomers
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -228,11 +228,16 @@ namespace Vidly.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("DateOfBirth")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<byte>("MembershipTypeId")
                         .HasColumnType("tinyint");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(255)")
+                        .HasMaxLength(255);
 
                     b.Property<bool>("isSubscripedToNewsLietter")
                         .HasColumnType("bit");
@@ -241,7 +246,7 @@ namespace Vidly.Data.Migrations
 
                     b.HasIndex("MembershipTypeId");
 
-                    b.ToTable("customers");
+                    b.ToTable("Customers");
                 });
 
             modelBuilder.Entity("Vidly.Models.MembershipType", b =>
@@ -255,12 +260,15 @@ namespace Vidly.Data.Migrations
                     b.Property<byte>("DurationInMonths")
                         .HasColumnType("tinyint");
 
+                    b.Property<string>("NameOfMemebership")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<short>("SignUpFee")
                         .HasColumnType("smallint");
 
                     b.HasKey("Id");
 
-                    b.ToTable("MembershipType");
+                    b.ToTable("MembershipTypes");
                 });
 
             modelBuilder.Entity("Vidly.Models.Movie", b =>
@@ -275,7 +283,7 @@ namespace Vidly.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("movies");
+                    b.ToTable("Movies");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

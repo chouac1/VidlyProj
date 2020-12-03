@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Vidly.Data.Migrations
+namespace Vidly.Migrations
 {
-    public partial class InitialModel : Migration
+    public partial class SampleTest : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

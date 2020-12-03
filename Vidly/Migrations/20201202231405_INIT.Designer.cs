@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vidly.Data;
 
-namespace Vidly.Data.Migrations
+namespace Vidly.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201202165922_Updated DBSet")]
-    partial class UpdatedDBSet
+    [Migration("20201202231405_INIT")]
+    partial class INIT
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -257,12 +257,15 @@ namespace Vidly.Data.Migrations
                     b.Property<byte>("DurationInMonths")
                         .HasColumnType("tinyint");
 
+                    b.Property<string>("NameOfMemebership")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<short>("SignUpFee")
                         .HasColumnType("smallint");
 
                     b.HasKey("Id");
 
-                    b.ToTable("MembershipType");
+                    b.ToTable("MembershipTypes");
                 });
 
             modelBuilder.Entity("Vidly.Models.Movie", b =>

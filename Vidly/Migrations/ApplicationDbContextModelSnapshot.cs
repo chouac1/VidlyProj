@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vidly.Data;
 
-namespace Vidly.Data.Migrations
+namespace Vidly.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -226,6 +226,9 @@ namespace Vidly.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("DateOfBirth")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<byte>("MembershipTypeId")
                         .HasColumnType("tinyint");
 
@@ -255,12 +258,15 @@ namespace Vidly.Data.Migrations
                     b.Property<byte>("DurationInMonths")
                         .HasColumnType("tinyint");
 
+                    b.Property<string>("NameOfMemebership")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<short>("SignUpFee")
                         .HasColumnType("smallint");
 
                     b.HasKey("Id");
 
-                    b.ToTable("MembershipType");
+                    b.ToTable("MembershipTypes");
                 });
 
             modelBuilder.Entity("Vidly.Models.Movie", b =>
