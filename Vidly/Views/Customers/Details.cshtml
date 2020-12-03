@@ -7,8 +7,17 @@
     <title>Vidly - @Model.Name</title>
 </head>
 <body>
+    <h1>@Model.Name</h1>
+    
+    <ul>
+        <li>@Model.MembershipType.NameOfMemebership</li>
 
-    <h1>Hello World, my name is @Model.Name!!</h1>
+        @if (Model.DateOfBirth != null)
+            {
+                <li>@Model.DateOfBirth</li>
+            }
+    </ul>
+
 
 </body>
 </html>
