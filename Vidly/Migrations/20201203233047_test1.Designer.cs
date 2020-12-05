@@ -10,8 +10,8 @@ using Vidly.Data;
 namespace Vidly.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201202231405_INIT")]
-    partial class INIT
+    [Migration("20201203233047_test1")]
+    partial class test1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -228,6 +228,9 @@ namespace Vidly.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime?>("DateOfBirth")
+                        .HasColumnType("datetime2");
+
                     b.Property<byte>("MembershipTypeId")
                         .HasColumnType("tinyint");
 
@@ -244,6 +247,21 @@ namespace Vidly.Migrations
                     b.HasIndex("MembershipTypeId");
 
                     b.ToTable("Customers");
+                });
+
+            modelBuilder.Entity("Vidly.Models.Genre", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("TypeOfGenre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Genres");
                 });
 
             modelBuilder.Entity("Vidly.Models.MembershipType", b =>
@@ -275,10 +293,24 @@ namespace Vidly.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime?>("DateAdded")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double?>("NumberInStock")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime?>("ReleaseDate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("GenreId");
 
                     b.ToTable("Movies");
                 });
@@ -339,6 +371,15 @@ namespace Vidly.Migrations
                     b.HasOne("Vidly.Models.MembershipType", "MembershipType")
                         .WithMany()
                         .HasForeignKey("MembershipTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Vidly.Models.Movie", b =>
+                {
+                    b.HasOne("Vidly.Models.Genre", "Genre")
+                        .WithMany()
+                        .HasForeignKey("GenreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

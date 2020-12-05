@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Vidly.Migrations
 {
-    public partial class INIT : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -47,6 +47,19 @@ namespace Vidly.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Genres",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TypeOfGenre = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Genres", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MembershipTypes",
                 columns: table => new
                 {
@@ -59,19 +72,6 @@ namespace Vidly.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_MembershipTypes", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Movies",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Movies", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -181,12 +181,33 @@ namespace Vidly.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Movies",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true),
+                    GenreId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Movies", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Movies_Genres_GenreId",
+                        column: x => x.GenreId,
+                        principalTable: "Genres",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Customers",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 255, nullable: false),
+                    DateOfBirth = table.Column<DateTime>(nullable: true),
                     isSubscripedToNewsLietter = table.Column<bool>(nullable: false),
                     MembershipTypeId = table.Column<byte>(nullable: false)
                 },
@@ -244,6 +265,11 @@ namespace Vidly.Migrations
                 name: "IX_Customers_MembershipTypeId",
                 table: "Customers",
                 column: "MembershipTypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Movies_GenreId",
+                table: "Movies",
+                column: "GenreId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -277,6 +303,9 @@ namespace Vidly.Migrations
 
             migrationBuilder.DropTable(
                 name: "MembershipTypes");
+
+            migrationBuilder.DropTable(
+                name: "Genres");
         }
     }
 }

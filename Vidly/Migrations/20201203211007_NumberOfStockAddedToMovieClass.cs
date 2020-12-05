@@ -2,21 +2,21 @@
 
 namespace Vidly.Migrations
 {
-    public partial class AddedDobToCustomers : Migration
+    public partial class NumberOfStockAddedToMovieClass : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "DateOfBirth",
-                table: "Customers",
+            migrationBuilder.AddColumn<double>(
+                name: "NumberInStock",
+                table: "Movies",
                 nullable: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "DateOfBirth",
-                table: "Customers");
+                name: "NumberInStock",
+                table: "Movies");
         }
     }
 }

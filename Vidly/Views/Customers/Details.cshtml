@@ -10,11 +10,11 @@
     <h1>@Model.Name</h1>
     
     <ul>
-        <li>@Model.MembershipType.NameOfMemebership</li>
+        <li>Membership Type: @Model.MembershipType.NameOfMemebership</li>
 
         @if (Model.DateOfBirth != null)
             {
-                <li>@Model.DateOfBirth</li>
+                <li>Birthdate: @Model.DateOfBirth.Value.ToShortDateString()</li>
             }
     </ul>
 

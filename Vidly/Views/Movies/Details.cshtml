@@ -8,7 +8,14 @@
 </head>
 <body>
 
-    <h1>Hello World, this movie is @Model.Name!!</h1>
+    <h1>@Model.Name</h1>
+
+    <ul>
+        <li>Genre: @Model.Genre.TypeOfGenre</li>
+        <li>Release Date: @Model.ReleaseDate.Value.ToShortDateString()</li>
+        <li>Date Added: @Model.DateAdded.Value.ToShortDateString()</li>
+        <li>Number in Stock: @Model.NumberInStock</li>
+    </ul>
 
 </body>
 </html>

@@ -162,10 +162,11 @@ C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netco
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Vidly.dll
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Vidly.pdb
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Vidly.genruntimeconfig.cache
-C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Random.cshtml.g.cs
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_NavBar.cshtml.g.cs
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Index.cshtml.g.cs
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Details.cshtml.g.cs
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Index.cshtml.g.cs
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Details.cshtml.g.cs
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\linq2db.dll
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Customers\CustomerForm.cshtml.g.cs
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Movies\MovieForm.cshtml.g.cs

@@ -2,7 +2,7 @@
 
 namespace Vidly.Migrations
 {
-    public partial class SampleTest : Migration
+    public partial class test1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
