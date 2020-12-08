@@ -47,6 +47,7 @@ namespace Vidly.Controllers
         {
             if (movie.Id == 0)
                 _context.Movies.Add(movie);
+
             else
             {
                 var movieInDb = _context.Movies.Where(m => m.Id == movie.Id).Single();
@@ -57,7 +58,14 @@ namespace Vidly.Controllers
                 movieInDb.NumberInStock = movie.NumberInStock;
             }
 
-            _context.SaveChanges();
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             return RedirectToAction("Index", "Movies");
         }
