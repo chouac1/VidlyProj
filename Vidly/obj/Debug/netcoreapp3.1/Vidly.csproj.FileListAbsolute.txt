@@ -132,7 +132,6 @@ C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netco
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Vidly.csprojAssemblyReference.cache
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Vidly.AssemblyInfoInputs.cache
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Vidly.AssemblyInfo.cs
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Vidly.csproj.CoreCompileInputs.cache
@@ -170,3 +169,14 @@ C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netco
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\linq2db.dll
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Customers\CustomerForm.cshtml.g.cs
 C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Razor\Views\Movies\MovieForm.cshtml.g.cs
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\Antlr3.Runtime.dll
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\System.Web.Optimization.dll
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\WebGrease.dll
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+C:\Users\Work and School\Desktop\DevCode\C#\Projects\Vidly\Vidly\obj\Debug\netcoreapp3.1\Vidly.csprojAssemblyReference.cache
