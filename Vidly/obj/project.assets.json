@@ -9149,11 +9149,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Work and School\\Desktop\\DevCode\\C#\\Projects\\Vidly\\Vidly\\Vidly.csproj",
+      "projectUniqueName": "C:\\Users\\Work and School\\Desktop\\DevCode\\C#\\Projects\\VidlyProj\\Vidly\\Vidly.csproj",
       "projectName": "Vidly",
-      "projectPath": "C:\\Users\\Work and School\\Desktop\\DevCode\\C#\\Projects\\Vidly\\Vidly\\Vidly.csproj",
+      "projectPath": "C:\\Users\\Work and School\\Desktop\\DevCode\\C#\\Projects\\VidlyProj\\Vidly\\Vidly.csproj",
       "packagesPath": "C:\\Users\\Work and School\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Work and School\\Desktop\\DevCode\\C#\\Projects\\Vidly\\Vidly\\obj\\",
+      "outputPath": "C:\\Users\\Work and School\\Desktop\\DevCode\\C#\\Projects\\VidlyProj\\Vidly\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Work and School\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OjXQYiXr7kuEKEIArDPzLh74tZAylHj9sJi3RwXuJoeAMUaAScoNzSM02BAybJoSKP/PkjkW5pmggLRBoHAsqQ==",
+  "dgSpecHash": "AtSvXPrLFB8KtyUY5r8SklnrJotX0UA7UHtqFhcIm3xuSr7pS4VdzeS8uBzb3uOV0BbshmeR20CicoO4ALEiAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Work and School\\Desktop\\DevCode\\C#\\Projects\\Vidly\\Vidly\\Vidly.csproj",
+  "projectFilePath": "C:\\Users\\Work and School\\Desktop\\DevCode\\C#\\Projects\\VidlyProj\\Vidly\\Vidly.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Work and School\\.nuget\\packages\\antlr\\3.4.1.9004\\antlr.3.4.1.9004.nupkg.sha512",
     "C:\\Users\\Work and School\\.nuget\\packages\\jquery\\3.5.1\\jquery.3.5.1.nupkg.sha512",
